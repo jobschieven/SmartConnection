@@ -49,6 +49,13 @@
       <div id="location"></div>
    </div>
    <script lang="text/javascript">
+     
+     //AANROEP FUNCTIE
+     window.onload = function () 
+      {
+         weatherBalloon(2750052);
+      }
+
       function weatherBalloon(cityID) {
          var key = 'fa63936206ec00ef70abf1c22ce90efb';
          fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
@@ -77,10 +84,6 @@
          } else if (description.indexOf('sunny') > 0) {
             document.body.className = 'sunny';
          }
-      }
-
-      window.onload = function () {
-         weatherBalloon(2750052);
       }
    </script>
 
