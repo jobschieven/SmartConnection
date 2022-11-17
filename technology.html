@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>
+        Portfolio: Jelle van Brummelen
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Smart Industry</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="connection.html">Connection</a></li>
+                    <li><a href="me.html">Me</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="project.html">Project</a></li>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section class="home">
+    </section>
+    <div style="height: auto">
+        <!-- just to make scrolling effect possible -->
+        <br>
+        <h2 class="myH2">Smart Technology</h2>
+        <p class="myP">
+    </div>
+
+
+
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+    <script>
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn(1000);
+
+    });
+
+    </script>
+
+
+ <!--Body technology page-->
+    
+
+    <!--ESP32 op Breadboard-->
+    <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">ESP32 op Breadboard</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">Plant-systeem</p><!--2e title-->
+            </div>
+          </div>
+        
+
+        <!--Tekst-->
+        <div id="textleft" class="myT1">
+            Tijdens het vak "Smart Technology" heb ik geleerd hoe een microcontroller, zoals
+            de ESP32, werkt. Door gebruik te maken van een zogeheten "Breadboard" kan de microcontroller
+            eenvoudig aangesloten worden op verschillende sensoren. Het uiteindelijke doel hierbij
+            is om een plant geautomatiseerd van de juiste hoeveelheid water en licht te voorzien. 
+            <br>
+            <br>De microcontroller is op het breadboard geplaats, samen met een bodemvochtigheidssensor,
+            DHT (digital temperature/humidty) sensor, een lichtgevoelige weerstand (LDR) en een
+            RF-transmitter. Door deze sensoren uit te lezen en in de programmatuur te koppelen aan
+            bepaalde voorwaarden, kan de microcontroller verschillende acties aansturen.
+            <br>
+            <br>Op het breadboard is ook een relais geplaatst, welke door de microcontroller aangestuurd
+            kan worden. Aan dit relais wordt een pompje gekoppeld welke de plant van water kan voorzien.
+            Ook wordt er gebruik gemaakt van een zogeheten "KlikAanKlikUit-schakelaar". Deze
+            schakelaar kan in het stopcontact geplaatst worden en wordt dan op afstand aangestuurd.
+            Voor het aansturen van deze schakelaar is een radiosignaal nodig, deze wordt uitgezonden
+            door de RF-transmitter. De schakelaar in het stopcontact schakelt een lamp, welke voor
+            extra licht zorgt als dit nodig is.
+            <br>
+            <br>
+        </div>
+
+        <div id="imageright">
+            <img src="images/20220913_083523.jpg" class="imagescale imagefit">
+            <br>
+            <br>
+        </div>
+
+    </section>
+    <br>
+    <br>
+   
+    <!--VisualStudioCode-->
+    <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">Visual Studio Code</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">Plant-systeem</p><!--2e title-->
+            </div>
+          </div>
+        
+
+        <!--Tekst-->
+        <div id="textleft" class="myT1">
+            Om het geheel werkend te krijgen moet de microcontroller weten wat het moet uitvoeren. Met het
+            programma "Visual Studio Code" heb ik een code geschreven in de programmeertaal C++. De code bestaat
+            uit meerdere regels, welke van boven naar beneden uitgevoerd worden.
+            <br>
+            <br>Rechts is de code waarmee ik de microcontroller geprogrammeerd heb.
+            <br>
+            <br>
+        </div>
+
+        <!--Programeercode in tekstvak-->
+        <div id="imageright" class="tekstvakVSC">
+                                                                        #include <Arduino.h>
+                                                                        <br> #include "switchKaKu.h"
+                                                                        <br>#include "DHT.h"
+                                                                        <br>
+                                                                        <br>#define DHTPIN 32
+                                                                        <br>#define DHTTYPE DHT11
+                                                                        <br>#define TRANSMITTERID1 190826
+                                                                        <br>#define rfPin 25
+                                                                        <br>#define ledPin 2
+                                                                        <br>
+                                                                        <br>DHT dht(DHTPIN, DHTTYPE);
+                                                                        <br>
+                                                                        <br>//Set pin number
+                                                                        <br>const int ldrPin = 39;
+                                                                        <br>int moistSensPin = 36;
+                                                                        <br>int moistValue = 0;
+                                                                        <br>int pumpPin = 33;
+                                                                        <br>
+                                                                        <br>int lightInitial;
+                                                                        <br>int lightValue;
+                                                                        <br>int humidity;
+                                                                        <br>int temperature;
+                                                                        <br>
+                                                                        <br>/*************************************************************
+                                                                        <br>
+                                                                        <br>  This is a simple demo of sending and receiving some data.
+                                                                        <br>  Be sure to check out other examples!
+                                                                        <br> *************************************************************/
+                                                                        <br>
+                                                                        <br>// Template ID, Device Name and Auth Token are provided by the Blynk.Cloud
+                                                                        <br>// See the Device Info tab, or Template settings
+                                                                        <br>#define BLYNK_TEMPLATE_ID           "TMPL2SooU0Q2"
+                                                                        <br>#define BLYNK_DEVICE_NAME           "Quickstart Device"
+                                                                        <br>#define BLYNK_AUTH_TOKEN            "mKHLov39TKS7lJRNhPOtU1GEwUKw42gh"
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>// Comment this out to disable prints and save space
+                                                                        <br>#define BLYNK_PRINT Serial
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>#include <WiFi.h>
+                                                                        <br>#include <WiFiClient.h>
+                                                                        <br>#include <BlynkSimpleEsp32.h>
+                                                                        <br>
+                                                                        <br>char auth[] = BLYNK_AUTH_TOKEN;
+                                                                        <br>
+                                                                        <br>// Your WiFi credentials.
+                                                                        <br>// Set password to "" for open networks.
+                                                                        <br>char ssid[] = "Hotspot Jelle";
+                                                                        <br>char pass[] = "Wifi0000";
+                                                                        <br>
+                                                                        <br>BlynkTimer timer;
+                                                                        <br>
+                                                                        <br>// This function is called every time the Virtual Pin 0 state changes
+                                                                        <br>BLYNK_WRITE(V0)
+                                                                        <br>{
+                                                                        <br> // Set incoming value from pin V0 to a variable
+                                                                        <br> int value = param.asInt();
+                                                                        <br>
+                                                                        <br> // Update state
+                                                                        <br> Blynk.virtualWrite(V1, value);
+                                                                        <br>}
+                                                                            
+                                                                        <br>// This function is called every time the device is connected to the Blynk.Cloud
+                                                                        <br>BLYNK_CONNECTED()
+                                                                        <br>{
+                                                                        <br> // Change Web Link Button message to "Congratulations!"
+                                                                        <br>Blynk.setProperty(V3, "offImageUrl", "https://static-image.nyc3.cdn.digitaloceanspaces.com/general/fte/congratulations.png");
+                                                                        <br> Blynk.setProperty(V3, "onImageUrl",  "https://static-image.nyc3.cdn.digitaloceanspaces.com/general/fte/congratulations_pressed.png");
+                                                                        <br> Blynk.setProperty(V3, "url", "https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/how-quickstart-device-was-made");
+                                                                        <br>}
+                                                                        <br>
+                                                                        <br>// This function sends Arduino's uptime every second to Virtual Pin 2.
+                                                                        <br>void myTimerEvent()
+                                                                        <br>{
+                                                                        <br>moistValue = analogRead(moistSensPin);
+                                                                        <br>lightValue = analogRead(ldrPin);
+                                                                        <br>humidity = dht.readHumidity();
+                                                                        <br>temperature = dht.readTemperature();
+                                                                        <br>
+                                                                        <br>
+                                                                        <br> // You can send any value at any time.
+                                                                        <br> // Please don't send more that 10 values per second.
+                                                                        <br> Blynk.virtualWrite(V2, millis() / 1000);
+                                                                        <br> Blynk.virtualWrite(V5, moistValue);
+                                                                        <br> Blynk.virtualWrite(V6, lightValue);
+                                                                        <br> Blynk.virtualWrite(V7, humidity);
+                                                                        <br> Blynk.virtualWrite(V8, temperature);
+                                                                        <br>}
+                                                                        <br>
+                                                                        <br>void setup()
+                                                                        <br>{
+                                                                        <br> pinMode(ledPin, OUTPUT);
+                                                                        <br> // Debug console
+                                                                        <br> Serial.begin(9600);
+                                                                        <br>
+                                                                        <br> Blynk.begin(auth, ssid, pass);
+                                                                        <br>// You can also specify server:
+                                                                        <br>//Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
+                                                                        <br> //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8080);
+                                                                        <br>
+                                                                        <br> // Setup a function to be called every second
+                                                                        <br> timer.setInterval(1000L, myTimerEvent);
+                                                                        <br>}
+                                                                        <br>
+                                                                        <br>void loop()
+                                                                        <br>{
+                                                                        <br> Blynk.run();
+                                                                        <br> timer.run();
+                                                                        <br> // You can inject your own code or combine it with other sketches.
+                                                                        <br> // Check other examples on how to communicate with Blynk. Remember
+                                                                        <br> // to avoid delay() function!
+                                                                        <br>}
+                                                                            
+                                                                        <br>BLYNK_WRITE(V4)
+                                                                        <br>{
+                                                                        <br>if (param.asInt()==1) {
+                                                                        <br> digitalWrite(ledPin, HIGH);
+                                                                        <br> }else {
+                                                                        <br> digitalWrite(ledPin, LOW);
+                                                                        <br>}
+                                                                        <br> }
+            <br>
+            <br>
+        </div>
+
+    </section>  
+    <br>
+    <br>
+    
+    <!--Video's-->
+    <section class="bodycontainer">
+        <div class="row">
+            <div class="column2 imagefit">
+                <video width="100%" controls>
+                    <source src="videos/VID-20220913-WA0002~2_Trim.mp4" type="video/mp4">
+            </div>
+            <div class="column3 imagefit" id="page-sections">
+                <p class="myT4">
+                    <br>Filmpje van monitoren 
+                    <br>ESP32 in 
+                    <br>Blynk app
+                    <br><---
+                    <br>
+                    <br>
+                    <br>
+                    <br>Filmpje van de ESP32 die het relais en de lamp schakelt
+                    <br>--->
+                </p>
+            </div>
+            <div class="column4 imagefit">
+                <video width="100%" controls>
+                    <source src="videos/20220902_095642.mp4" type="video/mp4">
+            </div>
+          </div>
+          <br>
+          <br>
+        
+        
+    </section>
+        
+   
+
+    <!--Blynk Dashboard-->
+    <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">Blynk Dashboard</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">Plant-systeem</p><!--2e title-->
+            </div>
+          </div>
+        
+
+        <!--Tekst-->
+        <div id="textleft" class="myT1">
+            De microcontroller genereerd veel data. Deze data is, behalve als de microcontroller aan een PC gekoppeld is, niet uit te lezen.
+            Om deze data uit te kunnen lezen en de microcontroller te kunnen monitoren wordt gebruik gemaakt van "Blynk".
+            Met Blynk kan de microcontroller over een wifi-netwerk data uitwisselen met de server. Dezelfde server is via wifi ook bereikbaar
+            voor andere apparaten, zoals en laptop of smartphone. Op de website van Blynk, en in de app, heb ik een dashboard vormgegeven.
+            Hierop is zichtbaar wat de meetwaarden zijn van de sensoren, en kan ik op afstand een LED-lampje aansturen die op de
+            microcontroller bevestigd zit.
+            <br>
+            <br>In de afbeelding hieronder is een afbeelding van het dasboard te zien. Hierop kunnen de gemeten waarden afgelezen worden.
+            Zo'n zelfde dashboard, zie afbeelding rechts, is ook op de smartphone zichtbaar middels de Blynk app.
+            <br>
+            <br>
+            <img align="center" src="images/Blynk webdashboard2.jpg" width="98%">
+            <br>
+            <br>
+        </div>
+
+        <div id="imageright" class="imagescale imagefit">
+            <img src="images/Screenshot_Blynk IoT2.jpg" width="100%">
+            <br>
+            <br>
+        </div>
+
+    </section>  
+    <br>
+    <br>
+
+
+    <!--Workshops 3D-printen-->
+    <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">Workshops 3D-printen</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">Plant-systeem</p><!--2e title-->
+            </div>
+          </div>
+        
+
+        <!--Tekst-->
+        <p class="myT1">
+            In de derde week van minor ging de eerste workshop van "Additive Manufacturing" van start. De hiervoor genoemde
+            term is een verzamelnaam voor alle verschillende 3D-print-technieken. De workshops worden verzorgd door
+            <i>Herold Cremer</i>, specialist op het gebied van additive manufacturing.
+            <br>
+                <br><strong>Workshop 1</strong> _15 september
+                <br>In de eerste workshop werd er kennis gemaakt met 3D-printen. Voor mij is dit een bekend begrip en redelijk
+                bekende productiemethode. Er werd meer verteld over wat 3D-printen inhoudt en welke toepassingen er zijn.
+                Voor mij was dit geen nieuw verhaal, omdat ik in mijn opleiding werktuigbouwkunde eerder kennis gemaakt heb
+                met deze techniek. Tijdens de workshop werd ook dieper ingegaan over het proces in de software die benodigd
+                is om van een 3D-model een werkbaar bestand voor de printer te maken. Wederom was dit voor mij geen nieuw
+                verhaal. 
+                Tijdens deze workshop hebben we ook een kijkje genomen in het fablab van de Hogeschool Arnhem Nijmegen. Hier 
+                konden we een kijkje nemen bij de 3D-printers en werd wat uitleg gegeven over de werking van de verschillende
+                printers.
+                De workshop was voor mij een herhaling, hierdoor vond ik het niet heel interessant. Echter was de workshop wel 
+                zinvol omdat ik alles dan weer fris in het geheugen heb voor als we straks zelf iets gaan 3D-printen.
+                <br>
+                
+                <br><strong>Workshop 2</strong> _29 september
+                <br>Tijdens de tweede workshop over Additive Manufacturing heb ik meer informatie gekregen over de
+                beschikbare print-technieken. Hierbij werd vooral toegelicht hoe de technieken werkten, wat de mogelijkheden
+                met de technieken zijn en de daarbij behorende voor- en nadelen. Voor mij als toekomstig engineer was het
+                zinvolle informatie, zeker met de voordelen van 3D-printen ten behoeve van prototyping.
+                <br>Daarna kregen we een spoedcursus SolidWorks. Echter ben ik al ver bekend met deze software. Dus de 
+                uitleg was voor mij niet nodig. Ik heb niet actief meegedaan aan de uitleg en heb de keuze gemaakt om deze
+                tijd nuttig te besteden aan de bouw van mijn portfolio en het helpen van anderen die nog weinig ervaring 
+                hebben met SolidWorks.
+                <br>
+
+                <br><strong>Workshop 3</strong> _datum
+                <br>empty
+                <br>
+
+                <br><strong>Workshop 4</strong> _datum
+                <br>empty
+           
+            <br>
+            <br>
+        </p>    
+       
+    </section>  
+    <br>
+    <br>
+
+    <!--ICT-valley-->
+    <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">ICT-valley</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">12 oktober</p><!--2e titel-->
+            </div>
+          </div>
+
+        <!--Tekst-->
+        <div id="textleft" class="myT1">
+            <strong>Gebonden stikstof met in oppervlaktewater</strong>
+            <br>Ik heb een bezoek gebracht aan ICT-valley in Wageningen. Hier werden we ontvangen met een presentatie over een bedrijf dat 
+            een apparaat ontwikkelt die de hoeveelheid gebonden stikstof kan meten in oppervlaktewater. Ik was een beetje verward over het 
+            ontvangst omdat ons verteld was dat we een rondleiding kregen door een bedrijf. Desalniettemin was de presentatie best interessant.
+            In de presentatie werd eerst vooral de businesskant belicht van het apparaat en het bedrijf zelf. Later werd ook de technische kant 
+            van het apparaat besproken. Ik vond de businesskant niet zo boeiend, maar dat heeft er vooral mee te maken dat ik het niet zo goed 
+            kan volgen. Ik beschik simpelweg niet over de kennis om alles te begrijpen, en daarom blijft het verhaal niet altijd hangen en heb 
+            ik er persoonlijk niet zo veel aan.
+            <br>
+            <br><strong>Sharing innovation: Digital Twin</strong>
+            <br>Na het ontvangst en de presentatie gingen we naar het "Sharing-Innovation"-event. Hier werd door verschillende sprekers verteld 
+            over digital twin, en hoe zij het gebruikten in hun bedrijf. Ik vond het event een kleine teleurstelling. Het was wederom een erg 
+            business gerelateerd verhaal met weinig diepgang naar de technische kant, iets wat ik zeker verwacht had tijdens dit event. Na 
+            afloop van de presentaties vond nog een netwerkborrel plaats. Hier heb ik bewust niet aan deelgenomen omdat ik vond dat deze 
+            borrel voor mij niet zo relevant was.
+            <br>
+            <br>
+        </div>
+        
+        <div id="imageright" class="imagescale imagefit">
+            <img src="images/digital twin.jpg" width="100%">
+            <br>
+            <br>
+        </div>
+    </section>
+
+    
+ <!--Witte onderrand-->
+     <div style="height: 80px">
+     </div>
+</body>

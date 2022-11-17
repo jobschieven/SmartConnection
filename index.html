@@ -1,113 +1,187 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equip="refresh" content="10">
 
 <head>
-   <title>
-      Portfolio Jobs 
-   </title>
+    <title>
+        PORTFOLIO | JOB SCHIEVEN | 2022
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-   <!-- Headings -->
-   <H1>Porftfolio Job Schieven</H1>
-   <!-- Paragraaf -->
-   <P>
-      Wat is er te vinden op deze pagina
-   </P>
-   <!-- Lists-->
-   <list>
-      <ul>
-         <li>Over mij</li>
-         <li>Leerdoelen</li>
-         <li>Portfolio invulling per onderdeel</li>
-      </ul>
-   </list>
-   <P>
-      Navigeer naar portfolio per onderdeel
-   </P>
 
-   <!-- Link naar website in dezelfde window kjbkbkb
-         <a href="http://www.bijsterveld.im">Link naar mijn website in zelfde window</a>
-         <hr> -->
-   <!-- Link naar website in new window/tab 
-         <a href="http://www.bijsterveld.im"target="_blank">Link naar mijn website in een nieuw window</a>
-         <hr> -->
-   <!-- Open nieuwe pagina Smart buisiness -->
-   <a href="Smart Buisiness.html">Smart Buisiness </a>
-   <hr>
-   <!-- Open nieuwe pagina Smart buisiness -->
-   <a href="Smart Connection.html">Smart Connection </a>
-   <hr>
-   <!-- Open nieuwe pagina Smart buisiness -->
-   <a href="Smart Me.html">Smart Me </a>
-   <hr>
-   <!-- Open nieuwe pagina Smart buisiness -->
-   <a href="Smart Project.html">Smart Project </a>
-   <hr>
-   <!-- Open nieuwe pagina Smart buisiness -->
-   <a href="Smart technology.html">Smart technology </a>
-   <hr>
-   <!-- Open nieuwe pagina Smart buisiness -->
-   <a href="Wheater.html">Het weer </a>
-   <hr>
-   <!-- Target="_blank" zorgt ervoor dat de pagina in een nieuwe windows wordt weergegeven-->
+    <!--Pop-up-->
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h2>Welkom op deze website!</h2>
+        <p>
+            Op het moment is deze website in aanbouw. Hierdoor kan het voorkomen dat bepaalde functies nog niet werken
+            en dat de pagina onjuist weergegeven wordt.
+        </p>
+    </div>
+    <script src="javascript.js"></script>
 
-   <!-- Titeltekst Over mij -->
-   <H1>Over mij</H1>
-   <!-- Inhoud paragraaf over mij -->
-   <!-- link naar een image-->
-   <a href="images/foto.jpg">
-      <img src="images/foto.jpg" width="200">
-   </a>
-   <!-- tekst paragraaf over mij -->
-   <P>
-      Mijn naam is Job Schieven, eengedreven 20-jarige student EmbeddedSystems Engineering.
-   </P>
-   <P>
-      Ik benleergierig, heb doorzettingsvermogenen ben communicatief vaardig. Ik benerg accuraat en zowel zelfstandig
-      alsin teamverband ga ik professioneel te werk.
-   </P>
-   <P>
-      In een team ben ik erg hulpvaardig en heb ik oog vooranderen.
-   </P>
+    <!--Navigation bar-->
+    <nav class="nav">
+
+        <div class="logo">
+            <a href="index.html">Smart Industry</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="connection.html">Connection</a></li>
+                <li><a href="me.html">Me</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="project.html">Project</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+        <script>
+            function showTime() {
+                var date = new Date();
+                var h = date.getHours(); // 0 - 23
+                var m = date.getMinutes(); // 0 - 59
+                var s = date.getSeconds(); // 0 - 59
+                var session = "";
+
+                if (h == 0) {
+                    h = 23;
+                }
+
+                if (h > 23) {
+                    h = h - 23;
+                    session = "PM";
+                }
+
+                h = (h < 10) ? "0" + h : h;
+                m = (m < 10) ? "0" + m : m;
+                s = (s < 10) ? "0" + s : s;
+
+                var time = h + ":" + m + ":" + s + " " + session;
+                document.getElementById("MyClockDisplay").innerText = time;
+                document.getElementById("MyClockDisplay").textContent = time;
+
+                setTimeout(showTime, 1000);
+
+            }
+
+            showTime();
+        </script>
 
 
 
-   <!-- Video link naar video in lokale map-->
-   <video width="400" controls>
-      <source src="videos/mov_bbb.mp4" type="video/mp4">
-      Your brouwser does not support HTML5 video
-   </video>
-   <!-- This is comment
-         The controls attribute adds video controls, like play, pause, and volume.
-         It is a good idea to always include width and height attributes. 
-         If height and width are not set, the page might flicker while the video loads.
-         The <source> element allows you to specify alternative video files which the browser may choose from. 
-         The browser will use the first recognized format.
-         The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
-      -->
-   <!-- Video link naar youtube
-   
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/si9CFme1O6c" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-   </iframe>-->
-   <!-- This is comment
-         Een video insluiten
-         Ga op een computer naar de YouTube-video die je wilt insluiten.
-         Klik onder de video op DELEN Delen.
-         Klik op Insluiten.
-         Kopieer de HTML-code uit het vak dat wordt weergegeven.
-         Plak de code in de HTML van je blog of website.
-      -->
+    </section>
+    <div style="height: auto">
+        <!-- just to make scrolling effect possible -->
+        <br>
+        <br>
+        <h2 class="myH2">PORTFOLIO | JOB SCHIEVEN | 2022 </h2>
+        <br>
+        <br>
+        <p class="myP">
+    </div>
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/xCONAyL4Oow" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-   </iframe>
-   <hr>
 
-   <!-- image zonder link-->
-   <img src="images/foto.jpg" width="200">
+
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+    <script>
+        $('.navTrigger').click(function () {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn(1000);
+
+        });
+
+    </script>
+
+
+    <!--Body homepage-->
+    <div class="bodycontainer">
+
+        <!-- Profielfoto-->
+        <section id="bannerleft">
+            <img src="images/Profielfoto.jpg" width="100%">
+        </section>
+
+        <!--Tekst-->
+
+        <aside id="bannerright">
+            <p class="myT2">
+                Over mij
+            </p>
+            <p class="myT1">Mijn naam is Job Schieven. Vanaf september 2022 tot en met januari 2023 volgde ik de minor
+                Smart
+                Industry aan de Hogeschool Arnhem Nijmegen.
+                <br>
+                Op deze website heb ik een portfolio bijgehouden. Hierin laat ik zien wat ik gedaan heb tijdens de minor
+                en
+                wat ik heb geleerd.
+            </p>
+        </aside>
+        <hr>
+        <br>
+        <br>
+        
+        <aside id="bannerright">
+            <p class="myT2">
+                In het kort:
+                <list>
+                    <ul class="myT1">
+                        <li>20 jaar</li>
+                        <li>Werktuigbouwkunde aan Hogeschool Windesheim</li>
+                        <li>Fotografie, reizen, zeilen, mountainbiken en klussen aan auto's</li>
+                    </ul>
+                </list>
+            <p class="myT1">
+                Op het moment studeer ik Werktuigbouwkunde aan Hogeschool Windesheim in Zwolle. Smart Industry is de
+                tweede minor die ik volg.
+                <br>
+                <br>
+                Mijn eerste minor was Applied Mechanics. Dit was een minor die veel te maken had met de koude
+                werktuigbouw.
+                Ten opzichte van de basis opleiding ging deze minor verder in op onderwerpen zoals: mechanica, dynamica
+                en trillingsleer.
+                <br>
+                <br>
+                Na de eerste minor heb ik stage gelopen. Tijdens deze stage heb onderzocht hoe wagentjes automatisch
+                in een machine geladen konden worden door gebruik te maken van een AGV of AMR.
+            </p>
+        </aside> 
+    </div>
+
+
+
+
+
 </body>
-
-</html>

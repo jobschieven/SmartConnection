@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>
+        PORTFOLIO | JOB SCHIEVEN | 2022
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Smart Industry</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="connection.html">Connection</a></li>
+                    <li><a href="me.html">Me</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="project.html">Project</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section class="home">
+    </section>
+    <div style="height: auto">
+        <!-- just to make scrolling effect possible -->
+        <br>
+        <h2 class="myH2">Smart Connection</h2>
+        <p class="myP">
+    </div>
+
+
+
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+    <script>
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn(1000);
+
+    });
+
+    </script>
+
+    <!--Body Connection page-->
+ 
+    <!--Hello World-->
+    <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">Hello World</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">6 september</p><!--2e titel-->
+            </div>
+          </div>
+
+        <!--Tekst-->
+        <p class="myT1">
+        Tijdens de eerste workshop van "Connection" ben ik bezig geweest met de beginselen van het bouwen van een website. Ik heb geleerd 
+        hoe ik via de inspectie-tool van de browser een webpagina kan aanpassen en opslaan. Ik heb de website van Paruzzi gepakt. Dit is 
+        een leverancier van Volkswagen-onderdelen waar ik de onderdelen voor mijn auto vaak vandaan haal. Deze webpagina heb ik aangepast 
+        naar een soort vacaturesite, ik heb mijn eigen profiel erop weergegeven.
+        </p>
+        <br>
+        <!-- Button naar webpagina -->
+        <p align="center">
+            <a href="Hello world/Hello world 2.html">
+           <button class="btn" style="width:30%">Ga naar webpagina</button></a>
+           <br>
+           <br>
+            </p>
+            
+        </section>
+        <br>
+        <br>
+
+         <!--Ervaring connection-->
+        <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">Webdevelopment</p><!--Titel--> 
+            </div>
+          </div>
+
+        <!--Tekst-->
+        <p class="myT1">
+        Ik heb tijdens de workshops de beginselen geleerd waarmee ik een website kan bouwen. Terwijl ik thuis aan de website werkte ben ik 
+        steeds meer geïnteresseerd geraakt. Ik heb op internet van alles opgezocht over webdevelopment en leuke elementen die ik kan 
+        gebruiken op mijn eigen website. Hieronder presenteer ik wat ik allemaal geleerd heb.
+        </p>
+        <br>
+        <br>
+            
+        </section>
+        <br>
+        <br>
+
+        <!--Elements-->
+        <section class="bodycontainer">
+            <div class="row">
+                
+                <!--HTML-->
+                <div class="overlay-slide column5 imagescale imagefit" id="cards">
+                    <img src="images/HTML5.jpg" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">HTML</p>
+                        <p class="overlayT2">De basis van de website.<br><br></p>
+                    </div>
+                </div>
+                
+                
+                <!--CSS-->
+                <div class="overlay-slide column5 imagescale imagefit" id="cards">
+                    <img src="images/CSS.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">CSS</p>
+                        <p class="overlayT2">Om alles net iets mooier te maken.<br><br></p>
+                    </div>
+                </div>
+
+                <!--JS-->
+                <div class="overlay-slide column5 imagescale imagefit" id="cards">
+                    <img src="images/JS.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">JavaScript</p>
+                        <p class="overlayT2">Voor coole effecten.<br><br></p>
+                    </div>
+                </div>
+
+                <!--Pop-up-->
+                <div class="overlay-slide column5 imagescale imagefit" id="cards">
+                    <img src="images/POPUP.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">Pop-up</p>
+                        <p class="overlayT2">Irriteert de bezoeker direct na het openen van de website.</p>
+                    </div>
+                </div>
+
+                <!--API-->
+                <div class="overlay-slide column6 imagescale imagefit" id="cards">
+                    <img src="images/API.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">API</p>
+                        <p class="overlayT2">Gebruikt om andermans werk te stelen. <br>"Beter goed gejat dan zelf slecht bedacht"</p>
+                    </div>
+                </div>
+              </div>
+              <br>
+              <br
+            
+        </section>
+
+        <!--Elements rij 2-->
+        <section>
+            <div class="row">
+                
+                <!--Animatie-->
+                <div class=" overlay-slide column5 imagescale imagefit" id="cards">
+                    <img src="images/Animaker.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">Animaker</p>
+                        <p class="overlayT2">Introduceert mijn digital twin die jou welkom heet op deze website.</p>
+                    </div>
+                </div>
+                
+                <!--Bestanden insluiten-->
+                <div class="overlay-slide column5 imagescale imagefit" id="cards">
+                    <img src="images/insluiten.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">Insluiten</p>
+                        <p class="overlayT2">Bedoeld om de mooiste video's en bestanden op de website te tonen.</p>
+                    </div>
+                </div>
+
+                <!--Download button-->
+                <div class=" overlay-slide column5 imagescale imagefit" id="cards">
+                    <img src="images/download.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">Download button</p>
+                        <p class="overlayT2">Maak je geen zorgen, het is geen virus.<br><br></p>
+                    </div>
+                </div>
+
+                <!--Scroll-->
+                <div class="overlay-slide column5 imagescale imagefit" id="cards">
+                    <img src="images/Scroll.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">Scroll</p>
+                        <p class="overlayT2">Wordt gebruikt om dingen in een kleiner hokje te plaatsen dan waar het in past.</p>
+                    </div>
+                </div>
+
+                <!--Mobile-->
+                <div class="overlay-slide column6 imagescale imagefit" id="cards">
+                    <img src="images/Mobile.png" width="90%" class="imagecenter">
+                    <div>
+                        <p class="overlayT1">Mobiele versie</p>
+                        <p class="overlayT2">Meegaan met de tijd is ook belangrijk.<br><br></p>
+                    </div>
+                </div>
+              </div>
+              <br>
+              <br
+            
+            
+        </section>
+        <br>
+        <br>
+
+       
+     <!--Witte onderrand-->
+     <div style="height: 80px">
+     </div>
+</body>

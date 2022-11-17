@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>
+        Portfolio: Jelle van Brummelen
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Smart Industry</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="connection.html">Connection</a></li>
+                    <li><a href="me.html">Me</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="project.html">Project</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section class="home">
+    </section>
+    <div style="height: auto">
+        <!-- just to make scrolling effect possible -->
+        <br>
+        <h2 class="myH2">Smart Me</h2>
+        <p class="myP">
+    </div>
+
+
+
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+    
+    <script>
+    $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn(1000);
+
+    });
+
+    </script>
+
+<!--Body me page-->
+    
+
+    <!--Kookworkshop-->
+    <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">Kookworkshop</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">7 september</p><!--2e titel-->
+            </div>
+          </div>
+
+        <!--Tekst-->
+        <p class="myT1">
+            In het kader van "Smart Me" hebben we een kookworkshop gehad. Tijdens deze kookworkshop leerden we hoe lastig
+            het kon zijn om samen te werken en daarbij de juiste timing/planning te kiezen. 
+            <br>
+            <br>De workshop begon met een korte uitleg, daarna gingen we aan de slag. In het midden van keuken waren drie 
+            kisten geplaatst. Opgedeeld in teams van 4 à 5 man koos ieder team een kist. Met de ingedriënten die in de 
+            kisten zaten moest gekookt worden, genoeg om iedereen van een maaltijd te kunnen voorzien. Als eerste moest er
+            bepaald worden welke teams het voor-, hoofd- en nagerecht gingen verzorgen. Daarna moest er zowel binnen de teams
+            als tussen de teams onderling overlegd worden welke gerechten gemaakt gingen worden. Na het overleg werd een
+            tijdspad uitgestippeld en gingen de teams aan het werk. Na een paar uur hard werken, overleggen en discussiëren
+            hebben de teams aan tafel plaats kunnen nemen. Waar zij hebben kunnen genieten van de gerechten die zij zelf
+            hebben gemaakt:
+            <br>
+            
+            <div class="row">
+                <div class="column">
+                    <p class="myT1">Voorgerecht</p>
+                    <img src="images/Voorgerecht.jpg" alt="Snow" style="width:100%">
+                </div>
+                <div class="column">
+                    <p class="myT1">Hoofdgerecht</p>
+                    <img src="images/Hoofdgerecht.jpeg" alt="Forest" style="width:100%">
+                </div>
+                <div class="column">
+                    <p class="myT1">Nagerecht</p>
+                    <img src="images/Nagerecht.jpg" alt="Mountains" style="width:100%">
+                </div>
+              </div>
+           
+            
+            <br>
+            <br>
+        </p>  
+    </section>
+    <br>
+    <br>
+
+    
+    <!--Smart Journey-->
+    <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">Smart Journey</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">15 september</p><!--2e titel-->
+            </div>
+          </div>
+
+        <!--Tekst 1-->
+        <p class="myT1">
+            Tijdens deze workshop van het vak "Smart Me" is er aandacht besteed aan de eigen ontwikkeling. Hierbij werden 
+            we gestimuleerd om zelf na te denken wat we willen bereiken tijdens de minor. Hierbij stelden we ons zelf
+            de vraag: "Wat zijn mijn wicked questions?". Met welke paradoxale uitdaging(en) start ik deze minor?
+            <br>Voor mezelf heb ik de volgende twee "wicked questions":
+            <br>
+            <br><i>_1.  Hoe kan ik binnen de tijd van deze minor leren hoe IoT werkt, zoverre dat ik er in de toekomst mee kan 
+                    werken, zonder dat ik nu over de basiskennis beschik van elektrotechniek en programmeren?_</i>
+            <br><i>_2.  Hoe kan ik binnen de tijd van deze minor leren hoe ik een product dat ik ontwerp kan "verkopen" aan mijn 
+                    opdrachtgever zonder dat ik kennis heb van business?_</i>
+            <br>             
+            <br>
+            Ik vond het in het begin lastig om een "wicked question" te bedenken. De docenten gaven gelukkig een aantal
+            voorbeelden, dat maakte het een stuk makkelijker. Ik denk dat het belangrijk is om dit soort vragen te stellen 
+            voordat je aan een project begint. Hiermee kan je voor jezelf in kaart brengen waar je mogelijk tegenaan gaat 
+            lopen en kan je jezelf de kans bieden om oplossingen te zoeken zodat je het beoogde doel wél kan halen.
+            <br>
+            <br>
+        </p>  
+       
+        <!--Tekst 2-->
+        <p class="myT1">
+            Er werd tijdens de workshop naast de individuele "journey" ook aandacht besteed aan de "team journey". Hoe kan
+            je als team een doel bereiken? Hiervoor hebben we een kleine opdracht uitgevoerd in tweetallen. Het was de opdracht
+            om aan de andere persoon te vertellen wat jouw eerste indruk van die persoon was. Hierna moest de ontvanger hierop
+            reflecteren en beschrijven welke betekenis dit voor die persoon heeft.
+            <br>Deze opdracht heb ik samen uitgevoerd met Timo. Zijn eerste indruk van mij beschreef hij in de volgende drie woorden: 
+            "<strong>harde werker, fanatiek en extrovert</strong>".
+            <br>
+            <br>De indruk die Timo had van mij vond ik herkenbaar. Ik heb vaker gehoord van anderen dat ze de indruk hadden of vonden
+            dat ik hard werkte en gedreven was om het beoogte resultaat te behalen. Dat laatste koppel ik dan aan de term "fanatiek".
+            Dit alles kan bij mij helaas snel omvallen als ik de motivatie van iets verlies. Als ik het idee heb dat het werk zinloos
+            is dan kan ik ook de andere kant omslaan en juist niet hard werken. Voor mij is dit een soort bevestiging, dat 
+            ik overkom op anderen zoals ik mijzelf ook zie.
+            <br>             
+            <br>
+        </p>  
+    </section>
+    <br>
+    <br>
+
+
+     <!--Smart Work-->
+     <section class="bodycontainer" id="page-sections">
+        
+        <!--Koptekst-->       
+         <div class="row">
+            <div class="titlecolumn">
+                <p class="myT2">Smart Work</p><!--Titel--> 
+            </div>
+            <div class="titlecolumn2">
+            <br>
+                <p class="myT3">23 september</p><!--2e titel-->
+            </div>
+          </div>
+
+        <!--Tekst 1-->
+        <p class="myT1">
+            Ik heb op 23 september heb ik deelgenomen aan een workshop waarin besproken werd hoe je zelf beter kan sturen
+            welke taken je hebt in je toekomstige baan. De workshop werd gehouden op de Novio Tech Campus in Nijmegen. Op
+            dit voormalige bedrijventerrein van Phillips zitten nu 75 kleine en startende bedrijven gevestigd die met
+            High Tech innovaties bijdragen aan de gezondheidszorg. Na de workshop heeft de oprichter van een van de bedrijven
+            die gevestigd zit op de campus een presentatie gegeven over zijn bedrijf en het product dat zij ontwikkelen.
+            <br>
+            <br>
+        </p>  
+       
+        <!--Tekst 2-->
+        <p class="myT1">
+            <strong>Job-Engineering</strong>
+            <br>Jos Sanders en Luc Dorenbosch verzorgden een workshop die ging over Job-Engineering. Tijdens de workshop
+            bespraken zij de veranderende banenmarkt en de huidige manier waarop mensen ingezet worden. Mensen worden nu
+            geworven en ingezet op basis van een certificaat die vermeld waarvoor iemand is opgeleid. Echter betekend dit 
+            niet dat iemand zonder dat certificaat niet beschikt over de skills om hetzelfde werk te doen. 
+            <br>
+            <br>Tijdens de workshop kreeg ik een vel met stickers. Ik kreeg een vel met gele stickers, omdat mijn opleiding
+            gerelateerd is met "engineering". Anderen die met hun opleidings-achtergrond in dezelfde noemer vielen kregen
+            ook een vel met gele stickers. Zo werden de verschillende opledings-achtergronden van iedereen gegroepeerd en 
+            gekoppeld aan en kleur. Op elke stikker vulde ik één taak in die ik later in mijn werk zou moeten uitvoeren.
+            Hiermee werd inzichtelijk welke skills je als persoon nodig hebt om dat werk uit te voeren. Vervolgens werden alle 
+            stickers van iedereen geordend, stickers met dezelfde taak werden bij elkaar gelegd. Zo werd zichtbaar welke taken 
+            gedeeld worden met mensen met een andere opleidings-achtergrond. Ik leerde hiervan dat sommige taken die bij mijn
+            toekomstige werk horen ook bij andermans werk horen en hoeveel skills je dan eigenlijk deeld met anderen die 
+            compleet ander werk uitvoeren.
+            <br>
+            <br>De taken die op de stickers vermeld stonden werden vervolgens ingevoerd op een website. Daarna logde iedereen
+            in op die website. Vervolgens ging iedereen individueel de taken verdelen in een aantal categorieën. Hierbij maakte
+            ik onderscheid in taken die ik "kan en leuk vind", "kan en niet leuk vind", "niet kan maar wel wil leren" en "niet
+            kan en niet wil leren". Dit gaf mij het inzicht voor welke taken ik goed inzetbaar ben en welke niet, ook werd
+            zichtbaar op welke punten ik nog ontwikkelbaar ben. Mijn resultaten zijn hieronder te downloaden. Ik heb ook
+            geleerd dat ik kan sleutelen aan mijn toekomstige baan omdat ik weet welke taken ik wel en niet wil. Wellicht is
+            er iemand anders binnen dezelfde organisatie die de taken die ik niet wil doen wel heel graag doet. Zo kan je gaan
+            schuiven met je takenpakket, zodat iedereen uiteindelijk tevreden is en zo min mogelijk taken uitvoert die hij/zij niet 
+            wil uitvoeren. Ik vond de workshop er zinvol, het gaf een leuk inzicht hoe je straks samen met HR kan sleutelen aan je
+            baan.
+            <br>
+            <br>
+
+            <!-- Download button -->
+            <p align="center">
+            <a href="files/Resultaten Jelle van Brummelen mijn_match_met_morgen.pdf" download>
+            <button class="btn" style="width:95%"><i class="fa fa-download"></i> Download</button>
+            <br>             
+            <br>
+            <br>
+            </a>
+            </p>
+        </p>  
+
+        <!--Tekst 3-->
+        <p class="myT1">
+            <strong>Een High Tech oplossing voor het meten van bloedwaardes</strong>
+            <br>Na de workshop heb ik een presentatie bijgewoond van de oprichter van een van de bedrijven op de
+            Novio Tech Campus. Deze start-up heeft de afgelopen jaren gewerkt aan een nieuw en compact apparaat om
+            bloedwaardes te kunnen meten. Sommige mensen moeten wegens een ziekte zeer frequent bloedwaardes
+            laten meten en beoordelen door een arts. Hiervoor moeten ze naar het ziekenhuis, een tijdsrovende onderneming
+            voor de patiënt en ziekenhuispersoneel. Afhankelijk van de gemeten bloedwaardes moet de patiënt het medicijngebruik
+            aanpassen.
+            <br>
+            <br>Deze start-up heeft nu een apparaat ontwikkeld dat deze bloedwaardes kan meten. Met een klein apparaatje die
+            de patiënt op de arm plaatst wordt bloed verzameld. Vervolgens plaatst de patiënt dit kleine apparaatje op een
+            zogeheten "card" met daarin een vloeistof dat reageerd met het bloed. Deze "card" wordt in een ander compact
+            apparaat gestoken die vervolgens middels een lichtmeting de bloedwaardes meet. Deze meting kost de patiënt slechts
+            enkele minuten. De gemeten waarden kan hij/zij dan (telefonisch) bespreken met de arts. Via deze werkwijze bespaard
+            zowel de patiënt als het ziekenhuispersoneel veel tijd en moeite.
+            <br>
+            <br>Ik vind dit apparaat een goede ontwikkeling. Een mooi voorbeeld waarin duidelijk wordt hoe technologie het 
+            leven van mensen makkelijker kan maken.
+            <br>             
+            <br>
+        </p>  
+    </section>
+
+   
+ <!--Witte onderrand-->
+     <div style="height: 80px">
+     </div>
+</body>

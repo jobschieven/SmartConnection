@@ -1,0 +1,168 @@
+body			{ background-color:#f3f1f0; font-family:arial; background-image: url(/layout/bg.png); background-repeat:repeat-y; background-position: top left; }
+
+.TopBalk		{ width:1000px; height:270px; position:absolute; top:0px; left:0px; background-image: url(/layout/bg.top.gif); }
+
+.Jubileum		{ width:98px; height:93px; position:absolute; top:0px; left:885px; background-image: url(/layout/20years.gif); }
+
+.TopFoto		{ position:absolute; top:0px; left:0px; }
+
+.MenuBalk		{ position:absolute; top:58px; left:250px; width:725px; font-family:arial; font-size:15px; line-height:20px; color:white; }
+.MenuBalk a		{ color:white; text-decoration:none; font-weight:bold; background-color:#f19157; }
+.MenuBalk a:hover	{ color:#EEEEEE; text-decoration:underline; }
+.RegelTwee		{ text-align:center; width:600px; }
+
+.LinkerKolom		{ width:240px; position:absolute; top:280px; left:0px; text-align:center; }
+
+.RodeTekst		{ color:#DF0029; font-family:arial; font-size:14px; }
+
+.Content		{ font-family:verdana; font-size:13px; width:750px; position:absolute; top:130px; left:250px; }
+
+.VoetHR			{ color:silver; margin-bottom:7px; }
+
+a			{ color:blue; }
+a:hover			{ color:navy; }
+
+h1			{ font-size:175%; margin-bottom:0px; }
+
+h2			{ font-size:150%; margin-bottom:0px; }
+
+h3			{ font-size:125%; margin-bottom:0px; }
+
+.homeH1			{ font-size:100%; margin-bottom:0px; }
+
+.homeH2			{ font-size:175%; margin-bottom:0px; }
+
+.HeleBreedte		{ position:relative; left:-250px; width:100px; }
+
+.bedrijfsinfo		{ width:580px; text-align:left; background-color:pink; }
+
+.bgGroen		{ background-color:#d8f6dd; width:98%; padding:3px; font-size:11px; }
+.bgGroen a		{ color:black; }
+.bgGroen a:hover	{ color:red; }
+
+.winkelRandje		{ width:110px; background-color:white; padding:3px; }
+
+.winkelRandje2		{ width:50px; background-color:white; padding:3px; }
+
+.Openingstijden		{ margin:10px; margin-bottom:-13px; background-image: url(/layout/openingstijden.gif); padding:5px; font-size:12px; font-family:arial; height:255px; }
+.Openingstijden b	{ font-size:15px; }
+
+.BonnenHome		{ margin:10px; background-image: url(/layout/bonnenhome.gif); padding:5px; font-size:12px; font-family:arial; height:333px; text-align:left; }
+.BonnenHome b		{ font-size:15px; }
+
+.DonkerGrijs		{ color:#C0C0C0; }
+.DonkerGrijs:hover	{ color:#C0C0C0; }
+
+.Adres			{ font-size:11px; font-family:arial; }
+
+.mandjeNL		{ width:150px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/webwinkel/mandje.gif); margin-bottom:-50px; }
+.mandjeUK		{ width:150px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/webstore/mandje.gif); margin-bottom:-50px; }
+.mandjeSE		{ width:150px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/webshoppen/mandje.gif); margin-bottom:-50px; }
+.mandjeNO		{ width:150px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/webstore/mandje.gif); margin-bottom:-50px; }
+.mandjeFI		{ width:150px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/webstore/mandje.gif); margin-bottom:-50px; }
+.mandjeFR		{ width:150px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/fr/mandje.gif); margin-bottom:-50px; }
+.mandjePT		{ width:150px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/webstore/mandje.gif); margin-bottom:-50px; }
+
+.mandjeLeeg		{ width:220px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/layout/mandje-leeg.gif); margin-bottom:-50px; }
+.mandjeVol		{ width:220px; height:60px; position:relative; top:555px; left:-505px; background-image: url(/layout/mandje-vol.gif); margin-bottom:-50px; }
+
+.MandjeAantal		{ padding-top:10px; padding-left:80px; text-align:left; }
+.MandjePrijs		{ padding-top:4px; padding-left:80px; text-align:left; padding-bottom:5px; }
+.MandjeKop b		{ background-color:white; padding:2px; padding-top:0px; color:#ea955c; }
+
+.WWbanner		{ width:225px; padding:0px; margin:0px; position:absolute; top:475px; left:10px; }
+
+
+.BroodKruimel		{ text-align:left; font-size:80%; }
+
+
+.RechtsLijnen		{ float:right; margin-left:15px; text-align:center; font-size:10px; }
+
+.Midden			{ text-align:center; margin-bottom:20px; }
+
+
+
+
+#tabelrand		{ background-color:#d8f6dd; border-color:#f19157; border-width:5; border-style:solid; padding:5; width:50%; }
+
+.NaarLinks		{ float:left; }
+
+.voet			{ color:#E9E9E9; font-size:75%; text-align:center; }
+
+.navlinks		{ color:silver; }
+.navlinks:hover		{ color:silver; }
+
+.GroupMenu		{ }
+.GroupMenu td		{ font-size:10px; width:70px; background-color:#E9E9E9; padding-top:3px; padding-bottom:3px; text-align:center; }
+.GroupMenu td:hover	{ font-size:10px; width:70px; background-color:#d8f6dd; }
+.GroupMenu .Zelected	{ background-color:#f19157; }
+.GroupMenu .Zelected a	{ color:black; }
+
+
+.HiddenImg		{ opacity:0.4;filter:alpha(opacity=40); }
+.ShowImg		{ background-color:#f19157; }
+
+.KlantenFotos		{ padding:10px; background-color:#EAFFEA; width:98%; font-size:11px; border-color:#d8f6dd; border-style:solid; }
+
+.Kerst			{ width:740px; height:115px; margin:0px; padding:5px; background:#084EAD; background-image:url(/layout/kerst.png);
+			  color:white; font-size:14px; line-height:14px; text-align:center; position:relative; top:5px; }
+.Kerst small		{ font-size:9px; }
+
+.Pdf a			{ color:black; text-decoration:none; }
+.Pdf a:hover		{ color:navy; }
+
+.FaceBookKader		{ margin:10px; margin-top:-25px; margin-bottom:-13px; background-image: url(/layout/facebook-kader.gif); padding:2px; padding-top:10px; font-size:12px; font-family:arial; height:127px; }
+.FaceBookKader img	{ margin:0px; margin-bottom:8px; }
+
+.FaceBook		{ border:none; overflow:hidden; width:200px; height:80px; }
+
+.knop			{ cursor:pointer; border:outset 1px #ccc; background:#999; color:#000; padding: 0px; background:url('/layout/button.png') repeat-x left top; }
+
+.ButtnA			{ border:outset 1px #ccc; border-top-color:#E6E6E6; border-left-color:#E6E6E6; background:#999; color:#000; padding: 5px; font-size:10px;
+			  background:url('/layout/button.png') repeat-x left top; }
+.ButtnA a		{ color:black; text-decoration:none; font-size:110%; }
+
+.AlleenOpPrint		{ display:none; }
+
+.DealerLogOut1		{ position:absolute; top:5px; left:0px; width:800px; text-align:right; }
+.DealerLogOut2		{ width:175px; height:35px; padding-top:5px; text-align:center; font-size:70%; line-height:15px; background-image: url(/layout/logout-kader.png); }
+.DealerLogOut2 a	{ color:black; }
+
+
+
+
+
+div.rounded-header	{ background: url(/layout/rounded.gif) right top no-repeat; margin:0px; padding:0px; }
+div.rounded-header-twee	{ background: url(/layout/rounded.gif) left top no-repeat; height:10px; width:10px; margin:0px; padding:0px; }
+
+div.rounded-corners	{ background: url(/layout/rounded.gif) right center no-repeat; margin:0px; padding:0px; }
+div.rounded-corners-twee { background: url(/layout/rounded.gif) left center no-repeat; padding:0px; margin:0px; margin-right:5px; padding-left:5px; }
+div.rounded-corners-twee h3 { color:#0589c8; font-family:arial; text-align:center; padding:0px; margin:0px; }
+
+div.rounded-corners-twee .ImgL img { width:70px; height:60px; float:left; margin-right:5px; }
+div.rounded-corners-twee .ImgR img { width:70px; height:60px; float:right; margin-left:5px; }
+
+
+div.rounded-footer	{ background: url(/layout/rounded.gif) right bottom no-repeat; margin:0px; padding:0px; }
+div.rounded-footer-twee	{ background: url(/layout/rounded.gif) left bottom no-repeat; height:10px; width:10px; margin:0px; padding:0px; }
+
+
+.RetourIntern		{ display:none; }
+
+.RetourAdresLabel	{ display:none; }
+
+
+.Waarschuwing		{ color:red; margin:0px; padding:0px; margin-top:-12px; margin-bottom:-5px; }
+
+
+.LoginBlok		{ position:absolute; top:15px; left:275px; width:400px; height:70px; font-size:12px; }
+.SubLogin		{ padding-left:10px; padding-top:3px; line-height:20px; }
+.SubLogin a		{ color:black; padding:1px; }
+.SubLogin a:hover	{ color:orange; background-color:white; }
+
+.LoginKnop		{ background-image: url(/layout/login-knop-bg.png); font-size:20px; padding:10px; padding-top:11px; padding-bottom:9px; width:300px; height:25px; text-align:center; margin-top:10px; }
+.LoginKnop a		{ color:white; }
+.LoginKnop a:hover	{ color:#ea694a; }
+
+
+.Blauw			{ font-family:arial; font-size:120%; color:#0589c8; }
