@@ -126,7 +126,7 @@ body {
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
+        background-color: rgb(105, 105, 105);
         /*same background color of navbar*/
         background-position: center top;
     }
@@ -397,16 +397,16 @@ body {
 #page-sections{
 	float:none;
 	width:90%;
-    background: #2ec4ff25;
+    background: rgba(105, 105, 105, 0.145);
 	padding:0 2%;
 	box-sizing: border-box;
     border-radius: 1em;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(105, 105, 105, 0.145);
     transition: 0.3s;
 }
 
 #page-sections:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(105, 105, 105, 0.145);
   }
   
 
@@ -467,7 +467,7 @@ body {
 	padding: 2% 0% 2% 0%;
 	box-sizing: border-box;
     border-radius: 1em;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(105, 105, 105, 0.145);
     transition: 0.3s;
 }
 
@@ -642,7 +642,7 @@ ul{
 
 /* Style buttons */
 .btn {
-    background-color: rgb(13, 16, 49);
+    background-color: rgb(105, 105, 105);
     border: none;
     color: white;
     padding: 0.5% 1%;
@@ -706,7 +706,7 @@ ul{
     position: relative;
     margin: 10px auto;
     text-align: center;
-    background-color: rgb(13, 16, 49);
+    background-color: rgb(105, 105, 105);
     color: #ffffff;
     text-decoration: none;
     padding: 5px 0;
