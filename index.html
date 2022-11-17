@@ -81,41 +81,6 @@
     </nav>
 
     <section class="home">
-        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-        <script>
-            function showTime() {
-                var date = new Date();
-                var h = date.getHours(); // 0 - 23
-                var m = date.getMinutes(); // 0 - 59
-                var s = date.getSeconds(); // 0 - 59
-                var session = "";
-
-                if (h == 0) {
-                    h = 23;
-                }
-
-                if (h > 23) {
-                    h = h - 23;
-                    session = "PM";
-                }
-
-                h = (h < 10) ? "0" + h : h;
-                m = (m < 10) ? "0" + m : m;
-                s = (s < 10) ? "0" + s : s;
-
-                var time = h + ":" + m + ":" + s + " " + session;
-                document.getElementById("MyClockDisplay").innerText = time;
-                document.getElementById("MyClockDisplay").textContent = time;
-
-                setTimeout(showTime, 1000);
-
-            }
-
-            showTime();
-        </script>
-
-
-
     </section>
     <div style="height: auto">
         <!-- just to make scrolling effect possible -->
@@ -184,7 +149,7 @@
         <hr>
         <br>
         <br>
-        
+
         <aside id="bannerright">
             <p class="myT2">
                 In het kort:
@@ -209,7 +174,7 @@
                 Na de eerste minor heb ik stage gelopen. Tijdens deze stage heb onderzocht hoe wagentjes automatisch
                 in een machine geladen konden worden door gebruik te maken van een AGV of AMR.
             </p>
-        </aside> 
+        </aside>
     </div>
 
 

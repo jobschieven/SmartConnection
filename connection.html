@@ -11,37 +11,73 @@
 <body>
 
     <!--Navigation bar-->
-    <nav class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">Smart Industry</a>
-            </div>
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="index.html">Start</a></li>
-                    <li><a href="business.html">Business</a></li>
-                    <li><a href="connection.html">Connection</a></li>
-                    <li><a href="me.html">Me</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="project.html">Project</a></li>
-                </ul>
-            </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-        </div>
-    </nav>
+   <!--Navigation bar-->
+   <nav class="nav">
 
-    <section class="home">
-    </section>
-    <div style="height: auto">
-        <!-- just to make scrolling effect possible -->
-        <br>
-        <h2 class="myH2">Smart Connection</h2>
-        <p class="myP">
+    <div class="logo">
+        <a href="index.html">Smart Industry</a>
     </div>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <script>
+        function showTime() {
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23
+            var m = date.getMinutes(); // 0 - 59
+            var s = date.getSeconds(); // 0 - 59
+            var session = "";
+
+            if (h == 0) {
+                h = 23;
+            }
+
+            if (h > 23) {
+                h = h - 23;
+                session = "PM";
+            }
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("MyClockDisplay").innerText = time;
+            document.getElementById("MyClockDisplay").textContent = time;
+
+            setTimeout(showTime, 1000);
+
+        }
+
+        showTime();
+    </script>
+    <div id="mainListDiv" class="main_list">
+        <ul class="navlinks">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="business.html">Business</a></li>
+            <li><a href="connection.html">Connection</a></li>
+            <li><a href="me.html">Me</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="project.html">Project</a></li>
+        </ul>
+    </div>
+    <span class="navTrigger">
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+    </div>
+</nav>
+
+<section class="home">
+</section>
+<div style="height: auto">
+    <!-- just to make scrolling effect possible -->
+    <br>
+    <br>
+    <h2 class="myH2">PORTFOLIO | JOB SCHIEVEN | 2022 </h2>
+    <br>
+    <br>
+    <p class="myP">
+</div>
 
 
 
