@@ -138,6 +138,7 @@
             wel nieuw voor mij. Hierin heb ik mijzelf dus wel kunnen ontwikkelen.<br>
             Om er voor te zorgen dat ik mijzelf toch een toegevoegde waarde kon geven voor mijn leertraject heb ik er tijdens deze lessen op gefocust om 
             anderen te helpen. Doordat ik wat ervaring heb en het zelf net heb geleerd kan ik het goed overbrengen op een ander die daar baat bij heeft.
+            <br>
         </div>
 
         <div id="imageright">
@@ -165,192 +166,37 @@
         
 
         <!--Tekst-->
-        <div id="textleft" class="myT1">
-            <img align="center" src="images/meten.jpeg" width="35%">
-            <img align="center" src="images/meten2.jpeg" width="35%">
-            <img align="center" src="images/meten3.jpeg" width="35%">
-            <img align="center" src="images/ontwerp.jpeg" width="35%">
-            <img align="center" src="images/3D-ontwerp.jpg" width="35%">
+        <div class="myT1"><br>
+            In eerste instantie heb ik voor het ontwerpen van het bakje alle onderdelen bij elkaar gelegd zoals deze straks ook gesoldeerd zullen worden.
+            Op deze manier heb ik een idee hoe groot het geheel is en dit zijn dan ook de minimale maten die benodigd zijn voor het bakje.
+            Voor de zekerheid heb ik aan alle kanten 1 cm extra genomen, zodat ik strak geen ruimte gebrek heb. Hieronder de afmetingen
             <br>
-            <br>De microcontroller is op het breadboard geplaats, samen met een bodemvochtigheidssensor,
-            DHT (digital temperature/humidty) sensor, een lichtgevoelige weerstand (LDR) en een
-            RF-transmitter. Door deze sensoren uit te lezen en in de programmatuur te koppelen aan
-            bepaalde voorwaarden, kan de microcontroller verschillende acties aansturen.
+            <img align="center" src="images/meten.jpeg" width="35%"><br>
+            <img align="center" src="images/meten2.jpeg" width="35%"><br>
+            <img align="center" src="images/meten3.jpeg" width="35%"><br>
+            Ik had het idee om de PCB middels een schuifmechanisme klem te zetten in het bakje, zo zijn er geen schroef verbindingen nodig, maar kan het 
+            er toch eenvoudig uitgepakt worden. De pomp, de bodemvochtigheidssensor en de lichtweerstand moeten buiten het bakje bevestigd worden. Hier moeten 
+            wel kabels naar toe dus daarmee heb ik rekening gehouden door een gat in de zijwand te maken. Het accu pakket had ik achter de PCB bedacht zodat deze niet
+            tegen de componenten op de PCB aankomt. <br>
+            Het ontwerp is hieronder schematisch uitgewerkt: <br>
+            <img align="center" src="images/ontwerp.jpeg" width="35%"><br>
+            Dit onderdeel heb ik vervolgens uitgewerkt op de computer in een 3D-model. De deksel heb ik ook met een schuifmechanisme gemaakt, zodat deze makkelijk te 
+            demonteren is, omdat je bij het accupakket moet kunnen.<br>
+            Het 3D-model is hieronder te zien: <br>
+            <img align="center" src="images/3D-ontwerp.jpg" width="35%"><br>
+            <br>           
             <br>
-            <br>Op het breadboard is ook een relais geplaatst, welke door de microcontroller aangestuurd
-            kan worden. Aan dit relais wordt een pompje gekoppeld welke de plant van water kan voorzien.
-            Ook wordt er gebruik gemaakt van een zogeheten "KlikAanKlikUit-schakelaar". Deze
-            schakelaar kan in het stopcontact geplaatst worden en wordt dan op afstand aangestuurd.
-            Voor het aansturen van deze schakelaar is een radiosignaal nodig, deze wordt uitgezonden
-            door de RF-transmitter. De schakelaar in het stopcontact schakelt een lamp, welke voor
-            extra licht zorgt als dit nodig is.
+            Dit eindresultaat is geconverteerd naar een bestand die door de 3D-printer te lezen is. En vervolgens is deze uitgeprint.
+            Na een printtijd van 10:30 uur is het resultaat geworden zoals te zien is in het volgende filmpje:<br>
             <br>
-            <br>
-        </div>
-
-        <div id="imageright">
-            <img src="images/20220913_083523.jpg" class="imagescale imagefit">
-            <br>
-            <br>
-        </div>
-
-    </section>
-   
-    <!--VisualStudioCode-->
-    <section class="bodycontainer" id="page-sections">
-        
-        <!--Koptekst-->       
-         <div class="row">
-            <div class="titlecolumn">
-                <p class="myT2">Visual Studio Code</p><!--Titel--> 
+            <div class="column2 imagefit">
+                <video width="35%" controls>
+                    <source src="videos/film3D.mp4" type="video/mp4">
             </div>
-            <div class="titlecolumn2">
-            <br>
-                <p class="myT3">Plant-systeem</p><!--2e title-->
-            </div>
-          </div>
-        
-
-        <!--Tekst-->
-        <div id="textleft" class="myT1">
-            Om het geheel werkend te krijgen moet de microcontroller weten wat het moet uitvoeren. Met het
-            programma "Visual Studio Code" heb ik een code geschreven in de programmeertaal C++. De code bestaat
-            uit meerdere regels, welke van boven naar beneden uitgevoerd worden.
-            <br>
-            <br>Rechts is de code waarmee ik de microcontroller geprogrammeerd heb.
-            <br>
             <br>
         </div>
 
-        <!--Programeercode in tekstvak-->
-        <div id="imageright" class="tekstvakVSC">
-                                                                        #include <Arduino.h>
-                                                                        <br> #include "switchKaKu.h"
-                                                                        <br>#include "DHT.h"
-                                                                        <br>
-                                                                        <br>#define DHTPIN 32
-                                                                        <br>#define DHTTYPE DHT11
-                                                                        <br>#define TRANSMITTERID1 190826
-                                                                        <br>#define rfPin 25
-                                                                        <br>#define ledPin 2
-                                                                        <br>
-                                                                        <br>DHT dht(DHTPIN, DHTTYPE);
-                                                                        <br>
-                                                                        <br>//Set pin number
-                                                                        <br>const int ldrPin = 39;
-                                                                        <br>int moistSensPin = 36;
-                                                                        <br>int moistValue = 0;
-                                                                        <br>int pumpPin = 33;
-                                                                        <br>
-                                                                        <br>int lightInitial;
-                                                                        <br>int lightValue;
-                                                                        <br>int humidity;
-                                                                        <br>int temperature;
-                                                                        <br>
-                                                                        <br>/*************************************************************
-                                                                        <br>
-                                                                        <br>  This is a simple demo of sending and receiving some data.
-                                                                        <br>  Be sure to check out other examples!
-                                                                        <br> *************************************************************/
-                                                                        <br>
-                                                                        <br>// Template ID, Device Name and Auth Token are provided by the Blynk.Cloud
-                                                                        <br>// See the Device Info tab, or Template settings
-                                                                        <br>#define BLYNK_TEMPLATE_ID           "TMPL2SooU0Q2"
-                                                                        <br>#define BLYNK_DEVICE_NAME           "Quickstart Device"
-                                                                        <br>#define BLYNK_AUTH_TOKEN            "mKHLov39TKS7lJRNhPOtU1GEwUKw42gh"
-                                                                        <br>
-                                                                        <br>
-                                                                        <br>// Comment this out to disable prints and save space
-                                                                        <br>#define BLYNK_PRINT Serial
-                                                                        <br>
-                                                                        <br>
-                                                                        <br>#include <WiFi.h>
-                                                                        <br>#include <WiFiClient.h>
-                                                                        <br>#include <BlynkSimpleEsp32.h>
-                                                                        <br>
-                                                                        <br>char auth[] = BLYNK_AUTH_TOKEN;
-                                                                        <br>
-                                                                        <br>// Your WiFi credentials.
-                                                                        <br>// Set password to "" for open networks.
-                                                                        <br>char ssid[] = "Hotspot Jelle";
-                                                                        <br>char pass[] = "Wifi0000";
-                                                                        <br>
-                                                                        <br>BlynkTimer timer;
-                                                                        <br>
-                                                                        <br>// This function is called every time the Virtual Pin 0 state changes
-                                                                        <br>BLYNK_WRITE(V0)
-                                                                        <br>{
-                                                                        <br> // Set incoming value from pin V0 to a variable
-                                                                        <br> int value = param.asInt();
-                                                                        <br>
-                                                                        <br> // Update state
-                                                                        <br> Blynk.virtualWrite(V1, value);
-                                                                        <br>}
-                                                                            
-                                                                        <br>// This function is called every time the device is connected to the Blynk.Cloud
-                                                                        <br>BLYNK_CONNECTED()
-                                                                        <br>{
-                                                                        <br> // Change Web Link Button message to "Congratulations!"
-                                                                        <br>Blynk.setProperty(V3, "offImageUrl", "https://static-image.nyc3.cdn.digitaloceanspaces.com/general/fte/congratulations.png");
-                                                                        <br> Blynk.setProperty(V3, "onImageUrl",  "https://static-image.nyc3.cdn.digitaloceanspaces.com/general/fte/congratulations_pressed.png");
-                                                                        <br> Blynk.setProperty(V3, "url", "https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/how-quickstart-device-was-made");
-                                                                        <br>}
-                                                                        <br>
-                                                                        <br>// This function sends Arduino's uptime every second to Virtual Pin 2.
-                                                                        <br>void myTimerEvent()
-                                                                        <br>{
-                                                                        <br>moistValue = analogRead(moistSensPin);
-                                                                        <br>lightValue = analogRead(ldrPin);
-                                                                        <br>humidity = dht.readHumidity();
-                                                                        <br>temperature = dht.readTemperature();
-                                                                        <br>
-                                                                        <br>
-                                                                        <br> // You can send any value at any time.
-                                                                        <br> // Please don't send more that 10 values per second.
-                                                                        <br> Blynk.virtualWrite(V2, millis() / 1000);
-                                                                        <br> Blynk.virtualWrite(V5, moistValue);
-                                                                        <br> Blynk.virtualWrite(V6, lightValue);
-                                                                        <br> Blynk.virtualWrite(V7, humidity);
-                                                                        <br> Blynk.virtualWrite(V8, temperature);
-                                                                        <br>}
-                                                                        <br>
-                                                                        <br>void setup()
-                                                                        <br>{
-                                                                        <br> pinMode(ledPin, OUTPUT);
-                                                                        <br> // Debug console
-                                                                        <br> Serial.begin(9600);
-                                                                        <br>
-                                                                        <br> Blynk.begin(auth, ssid, pass);
-                                                                        <br>// You can also specify server:
-                                                                        <br>//Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
-                                                                        <br> //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8080);
-                                                                        <br>
-                                                                        <br> // Setup a function to be called every second
-                                                                        <br> timer.setInterval(1000L, myTimerEvent);
-                                                                        <br>}
-                                                                        <br>
-                                                                        <br>void loop()
-                                                                        <br>{
-                                                                        <br> Blynk.run();
-                                                                        <br> timer.run();
-                                                                        <br> // You can inject your own code or combine it with other sketches.
-                                                                        <br> // Check other examples on how to communicate with Blynk. Remember
-                                                                        <br> // to avoid delay() function!
-                                                                        <br>}
-                                                                            
-                                                                        <br>BLYNK_WRITE(V4)
-                                                                        <br>{
-                                                                        <br>if (param.asInt()==1) {
-                                                                        <br> digitalWrite(ledPin, HIGH);
-                                                                        <br> }else {
-                                                                        <br> digitalWrite(ledPin, LOW);
-                                                                        <br>}
-                                                                        <br> }
-            <br>
-            <br>
-        </div>
-
-    </section>  
+    </section> 
     <br>
     <br>
     
@@ -358,7 +204,7 @@
     <section class="bodycontainer">
         <div class="row">
             <div class="column2 imagefit">
-                <video width="100%" controls>
+                <video width="35%" controls>
                     <source src="videos/film3D.mp4" type="video/mp4">
             </div>
             
@@ -387,7 +233,7 @@
         
 
         <!--Tekst-->
-        <div id="textleft" class="myT1">
+        <div class="myT1">
             De microcontroller genereerd veel data. Deze data is, behalve als de microcontroller aan een PC gekoppeld is, niet uit te lezen.
             Om deze data uit te kunnen lezen en de microcontroller te kunnen monitoren wordt gebruik gemaakt van "Blynk".
             Met Blynk kan de microcontroller over een wifi-netwerk data uitwisselen met de server. Dezelfde server is via wifi ook bereikbaar
